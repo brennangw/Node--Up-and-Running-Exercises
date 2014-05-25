@@ -3,7 +3,7 @@ var net = require('net')
 var chatServer = net.createServer()
 	clientList = []
 
-clientServer.on('connection', function(client) {
+chatServer.on('connection', function(client) {
 	client.write('hi\n');
 
 	clientList.push(client)
@@ -14,3 +14,5 @@ clientServer.on('connection', function(client) {
 		}
 	})
 })
+
+chatServer.listen(9000)
